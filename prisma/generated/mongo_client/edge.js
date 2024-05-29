@@ -214,7 +214,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\EQUIPO\\Documents\\GitHub\\MovieHub-FullStack\\prisma\\generated\\mongo_client",
+      "value": "C:\\Users\\albam\\OneDrive\\Escritorio\\Vibesync-back\\prisma\\generated\\mongo_client",
       "fromEnvVar": null
     },
     "config": {
@@ -231,8 +231,7 @@ const config = {
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": null,
-    "schemaEnvPath": "../../../.env"
+    "rootEnvPath": null
   },
   "relativePath": "../..",
   "clientVersion": "5.13.0",
@@ -241,7 +240,7 @@ const config = {
     "db"
   ],
   "activeProvider": "mongodb",
-  "postinstall": false,
+  "postinstall": true,
   "inlineDatasources": {
     "db": {
       "url": {
