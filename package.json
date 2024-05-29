@@ -7,7 +7,9 @@
   "scripts": {
     "dev": "nodemon src/index.ts",
     "test": "cross-env NODE_ENV=test NODE_OPTIONS=--experimental-vm-modules jest login.test.ts --verbose --coverage --detectOpenHandles",
-    "generate-mongo": "pnpx prisma generate --schema=./prisma/schema.prisma"
+    "generate-mongo": "pnpx prisma generate --schema=./prisma/schema.prisma",
+    "start": "npm run build && node dist/index.js",
+    "build": "rimraf dist && tsc"
   },
   "keywords": [],
   "author": "",
