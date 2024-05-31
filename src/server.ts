@@ -35,7 +35,7 @@ app.use(cookieParser())
 
 //conexion con el front
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: "https://vibesyncfront-nj6givumb-aoterons-projects.vercel.app/",
     credentials: true
 }))
 
