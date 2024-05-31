@@ -34,8 +34,7 @@ app.use(express.json())
 app.use(cookieParser())
 
 const allowedOrigins = [
-    "https://vibesyncfront-nj6givumb-aoterons-projects.vercel.app",
-    "https://vibesyncfront-ct11mvd0t-aoterons-projects.vercel.app",
+    "https://vibesyncfrontproduction.vercel.app/",
 ]
 
 const corsOptions: cors.CorsOptions = {
