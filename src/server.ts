@@ -27,13 +27,13 @@ const app: Express = express()
 
 app.use(helmet())
 app.use(morgan('dev'))
-app.use(errorHandler)
 app.use(responseTime())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(cookieParser())
 
 const allowedOrigins = [
+    "http://localhost:5173",
     "https://vibesyncfrontproduction.vercel.app",
 ]
 
@@ -67,5 +67,7 @@ app.use("/api", albumsRoutes)
 app.use("/api", playlistsRoutes)
 app.use('/api', uploadRoutes)
 app.use('/api', search)
+
+app.use(errorHandler)
 
 export default app
