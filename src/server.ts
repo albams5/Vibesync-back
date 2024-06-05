@@ -36,7 +36,6 @@ app.use(cookieParser())
 
 const corsOptions = {
     origin:"http://localhost:5173",
-    methods: 'GET,PUT,POST,DELETE,PATCH,OPTIONS' ,
     credentials: true,
   }
 
@@ -49,7 +48,7 @@ app.use(fileUpload({
     abortOnLimit: true
 }));
 
-app.use("/api",cors(corsOptions), userRoutes)
+app.use("/api", userRoutes)
 app.use("/api", loginRoutes)
 app.use("/api", artistsRoutes)
 app.use("/api", genreRoutes)
