@@ -32,22 +32,11 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(cookieParser())
 
-const allowedOrigins = [
-    "http://localhost:5173",
-    "https://vibesyncfrontproduction.vercel.app",
-]
 
-const corsOptions: cors.CorsOptions = {
-    origin: (origin: string | undefined, callback: (err: Error | null, allow?: boolean)=>void) => {
-    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
-        callback(null, true)
-    } else {
-        callback(new Error('Not allowed by CORS'))
-        console.log('Not allowed by CORS!!!')
-    }
-    },
-    credentials: true
-};
+const corsOptions = {
+    origin:"https://vibesyncfrontproduction.vercel.app",
+    credentials: true,
+  }
 
 app.use(cors(corsOptions));
 
