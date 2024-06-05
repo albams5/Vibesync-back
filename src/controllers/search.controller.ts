@@ -5,7 +5,7 @@ export const search = async (req: Request, res: Response) => {
     const { term } = req.params;
 
     try {
-        const traksResults = await prisma.tracks.findMany({
+        const tracksResults = await prisma.tracks.findMany({
             where: {
                 name: {
                     startsWith: term,
@@ -43,7 +43,7 @@ export const search = async (req: Request, res: Response) => {
 
         const response = {
             artists: artistsResults,
-            tracks: traksResults,
+            tracks: tracksResults,
             genre: genreResults,
             albums: albumsResults
         }
